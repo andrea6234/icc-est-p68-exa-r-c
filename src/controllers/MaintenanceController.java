@@ -2,7 +2,9 @@ package controllers;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import models.MaintenanceRequest;
@@ -47,7 +49,23 @@ public class MaintenanceController {
 
       }
     };
-    Map<String,TreeSet<MaintenanceRequest>>
+    Map<String,TreeSet<MaintenanceRequest>> mapa = new TreeMap<>();
+    mapa.put("URGENT", new TreeSet<>(comparador));
+    mapa.put("PLANNED", new TreeSet<>(comparador));
+    mapa.put("ROUTINE", new TreeSet<>(comparador));
+for (MaintenanceRequest maintenanceRequest : requests) {
+  if(maintenanceRequest.getUrgency() >= 5 || maintenanceRequest.getMetrics().getCompletedChecks()>=18){
+    mapa.get("URGENT").add(maintenanceRequest);
+  }else if(maintenanceRequest.getMetrics().getImpact()>=700){
+   mapa.get("PLANNED").add(maintenanceRequest);
+
+
+  }else 
+    mapa.get("ROUTINE").add(maintenanceRequest);
+  }
+  
+
+
   }
 }
      
