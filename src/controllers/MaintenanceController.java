@@ -63,6 +63,9 @@ for (MaintenanceRequest maintenanceRequest : requests) {
   }else 
     mapa.get("ROUTINE").add(maintenanceRequest);
   }
+  requestedCategory = requestedCategory.trim().toUpperCase();
+  return requests;
+ 
   
 
 
