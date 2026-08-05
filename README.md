@@ -1,1 +1,2 @@
-primero usamos treeset ya que este metodo nos ayuda 
+primero usamos treeset ya que este metodo nos ayuda a ordenar de la forma desendete y asi acendente y asi mismo este se usa un compador el cual lo podemos ordenar de la manera que nosotros deseamos 
+metodo dos usamos asi mismo un treeset y treeMap ya que el mapa nos ayuda a tener codigo y clave y cual treeset va dentro de lo que buscamos y nos va ayudar a ordenar dependiendo lo que pidamos 
