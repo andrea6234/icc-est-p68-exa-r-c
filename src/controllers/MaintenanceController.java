@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -64,13 +65,23 @@ for (MaintenanceRequest maintenanceRequest : requests) {
     mapa.get("ROUTINE").add(maintenanceRequest);
   }
   requestedCategory = requestedCategory.trim().toUpperCase();
-  return requests;
+ 
+
+  Set<MaintenanceRequest> resultado = mapa.get(requestedCategory);
+  if(resultado == null){
+    return new ArrayList<>();
+  }
+  return new ArrayList<>(resultado);
+   
+
+  }
+ 
  
   
 
 
   }
-}
+
      
       
 
