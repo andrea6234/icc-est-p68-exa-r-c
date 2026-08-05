@@ -20,6 +20,14 @@ List<MaintenanceRequest> urgent =
 
 System.out.println("Method A: " + ordered.size());
 System.out.println("URGENT: " + urgent.size());
+runMetodo1(requests);
+    }
+
+    private static void runMetodo1(List<MaintenanceRequest> requests) {
+        for(MaintenanceRequest hola : requests){
+            
+
+        }
     }
     
 }
